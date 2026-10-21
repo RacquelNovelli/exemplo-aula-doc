@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#0001" class="md-skip">
+        <a href="#cadastro-de-usuarios" class="md-skip">
           Skip to content
         </a>
       
@@ -205,6 +205,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -221,6 +239,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-fluxo-da-funcionalidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Fluxo da funcionalidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-regras-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Regras de negócio
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -273,6 +343,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Objetivo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-fluxo-da-funcionalidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Fluxo da funcionalidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-regras-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Regras de negócio
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -288,82 +399,129 @@
 
 
 
-<p>ChatGPT Image 19 de set. de 2026, 20_48_13.png
-1. Objetivo
-Permitir que o Administrador cadastre usuários na Cardiovel, informando nome completo, e-mail e perfil de acesso.</p>
+<h1 id="cadastro-de-usuarios">Cadastro de usuários</h1>
+<p><strong>Sistema:</strong> Cardiovel<br />
+<strong>Funcionalidade:</strong> Cadastro de usuários<br />
+<strong>Categoria:</strong> 01_Requisitos_SRD — Especificação de Requisitos de Software<br />
+<strong>Escopo:</strong> Cadastro por Administrador, envio de convite e troca de senha no primeiro acesso.</p>
+<h2 id="1-objetivo">1. Objetivo</h2>
+<p>Permitir que o Administrador cadastre usuários na Cardiovel, informando nome completo, e-mail e perfil de acesso.</p>
 <p>Após o cadastro, o sistema gera uma senha temporária e envia um convite por e-mail. No primeiro acesso, o usuário deverá definir uma nova senha antes de acessar as funcionalidades permitidas pelo seu perfil.</p>
+<h2 id="2-fluxo-da-funcionalidade">2. Fluxo da funcionalidade</h2>
 <ol>
-<li>Fluxo da funcionalidade
-O processo de cadastro de um novo usuário ocorre da seguinte forma:</li>
+<li>O Administrador acessa <strong>Usuários → Novo usuário</strong>.</li>
+<li>O sistema exibe o formulário de cadastro.</li>
+<li>O Administrador informa nome completo, e-mail e perfil de acesso: <strong>Médico, Enfermagem, Recepção ou Administrador</strong>.</li>
+<li>O sistema valida os campos obrigatórios, o perfil e a unicidade do e-mail.</li>
+<li>Se houver dados inválidos, o sistema informa o problema e permite a correção.</li>
+<li>Com os dados válidos, o sistema cadastra o usuário, gera uma senha temporária e envia o convite por e-mail.</li>
+<li>No primeiro acesso, o usuário define uma nova senha que atende aos critérios de segurança do sistema.</li>
+<li>Após a troca de senha, o sistema libera as funcionalidades permitidas pelo perfil do usuário.</li>
 </ol>
-<p>O Administrador acesse Usuários → Novo usuário .</p>
-<p>O sistema exibe o formulário de cadastro.</p>
-<p>O Administrador informa nome completo, e-mail e perfil de acesso: Médico, Enfermagem, Recepção ou Administrador .</p>
-<p>O sistema valida os campos obrigatórios, o perfil e a unicidade do e-mail.</p>
-<p>Se houver dados inválidos, o sistema informa o problema e permite a correção.</p>
-<p>Com os dados válidos, o sistema cadastra o usuário, gera uma senha temporária e envia o convite por e-mail.</p>
-<p>No primeiro acesso, o usuário define uma nova senha que atende aos critérios de segurança do sistema.</p>
-<p>Após a troca de senha, o sistema libera as funcionalidades permitidas pelo perfil do usuário.</p>
-<ol>
-<li>Regras de negócio</li>
-</ol>
+<h2 id="3-regras-de-negocio">3. Regras de negócio</h2>
+<ul>
+<li>
 <h1 id="0001">0001</h1>
+</li>
+<li>
 <h1 id="0002">0002</h1>
+</li>
+<li>
 <h1 id="0003">0003</h1>
+</li>
+<li>
 <h1 id="0004">0004</h1>
+</li>
+<li>
 <h1 id="0005">0005</h1>
+</li>
+<li>
 <h1 id="0006">0006</h1>
+</li>
+<li>
 <h1 id="0007">0007</h1>
+</li>
+<li>
 <h1 id="0008">0008</h1>
-<ol>
-<li>Fluxograma
-O fluxo do cadastro pode ser representado da seguinte forma:</li>
-</ol>
-<p><ac:structured-macro ac:name="native-embed:whiteboard" ac:schema-version="1" data-layout="default" ac:local-id="05530438-d92e-4cd2-b929-8f4f5cc3bccb" ac:macro-id="ccda5f7a-b061-4840-9316-4da249cdc62c"><ac:parameter ac:name="url">https://edu-team-miecaeaj.atlassian.net/wiki/spaces/SistemaCar/whiteboard/164184</ac:parameter></ac:structured-macro></p>
-<p>Representação da tela
-O formulário de cadastro é exibido na página Usuários.</p>
-<p>Campo</p>
-<p>Descrição</p>
-<p>Nome completo</p>
-<p>Identificar o usuário.</p>
-<p>E-mail</p>
-<p>Endereço utilizado para login e recebimento do convite.</p>
-<p>Perfil de acesso</p>
-<p>Médico, Enfermagem, Recepção ou Administrador.</p>
-<p>Ações disponíveis:</p>
-<p>Cancelar: fecha o formulário sem cadastrar o usuário.</p>
-<p>Cadastrar usuário: envia os dados para validação e cadastro.</p>
-<p>O formulário informa que o sistema gera uma senha temporária e um envio por e-mail.</p>
-<ol>
-<li>Mensagens do sistema
-Situação</li>
-</ol>
-<p>Mensagem</p>
-<p>Cadastro realizado</p>
-<p>Usuário cadastrado com sucesso!</p>
-<p>E-mail duplicado</p>
-<p>E-mail já cadastrado.</p>
-<p>Campo obrigatório</p>
-<p>Preencha os campos obrigatórios.</p>
-<p>Perfil não selecionado</p>
-<p>Selecione um perfil de acesso.</p>
-<p>Falha no envio do convite</p>
-<p>Não foi possível enviar o convite. Tente novamente.</p>
-<p>Erro inesperado no cadastro</p>
-<p>Não foi possível cadastrar o usuário. Tente novamente.</p>
-<ol>
-<li>Considerações
-O cadastro centraliza o controle de acesso do Administrador. A validação do e-mail evita cadastros duplicados, enquanto o perfil define as funcionalidades disponíveis para cada usuário. A troca obrigatória da senha temporária protege o acesso inicial à conta.</li>
-</ol>
+</li>
+</ul>
+<h2 id="4-fluxograma">4. Fluxograma</h2>
+<p>O fluxo do cadastro pode ser consultado no quadro abaixo:</p>
+<p><a href="https://edu-team-miecaeaj.atlassian.net/wiki/spaces/SistemaCar/whiteboard/164184">Acessar fluxograma do cadastro de usuários</a></p>
+<h3 id="representacao-da-tela">Representação da tela</h3>
+<p>O formulário de cadastro é exibido na página <strong>Usuários</strong>.</p>
+<p><img alt="Tela de cadastro de usuários" src="ChatGPT Image 19 de set. de 2026, 20_48_13.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nome completo</td>
+<td>Identificar o usuário.</td>
+</tr>
+<tr>
+<td>E-mail</td>
+<td>Endereço utilizado para login e recebimento do convite.</td>
+</tr>
+<tr>
+<td>Perfil de acesso</td>
+<td>Médico, Enfermagem, Recepção ou Administrador.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ações disponíveis:</strong></p>
+<ul>
+<li><strong>Cancelar:</strong> fecha o formulário sem cadastrar o usuário.</li>
+<li><strong>Cadastrar usuário:</strong> envia os dados para validação e cadastro.</li>
+</ul>
+<p>O formulário informa que o sistema gera uma senha temporária e a envia por e-mail.</p>
+<h2 id="5-mensagens-do-sistema">5. Mensagens do sistema</h2>
+<table>
+<thead>
+<tr>
+<th>Situação</th>
+<th>Mensagem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cadastro realizado</td>
+<td>Usuário cadastrado com sucesso!</td>
+</tr>
+<tr>
+<td>E-mail duplicado</td>
+<td>E-mail já cadastrado.</td>
+</tr>
+<tr>
+<td>Campo obrigatório</td>
+<td>Preencha os campos obrigatórios.</td>
+</tr>
+<tr>
+<td>Perfil não selecionado</td>
+<td>Selecione um perfil de acesso.</td>
+</tr>
+<tr>
+<td>Falha no envio do convite</td>
+<td>Não foi possível enviar o convite. Tente novamente.</td>
+</tr>
+<tr>
+<td>Erro inesperado no cadastro</td>
+<td>Não foi possível cadastrar o usuário. Tente novamente.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-consideracoes">6. Considerações</h2>
+<p>O cadastro centraliza o controle de acesso do Administrador. A validação do e-mail evita cadastros duplicados, enquanto o perfil define as funcionalidades disponíveis para cada usuário. A troca obrigatória da senha temporária protege o acesso inicial à conta.</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
